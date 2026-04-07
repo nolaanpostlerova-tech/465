@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Configurações de Privacidade</title>
+<title>Cookies & Privacidade</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,118 +14,148 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-height:200vh;
-background:linear-gradient(120deg,#0f172a,#1e293b);
-}
-
-/* OVERLAY */
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
+background:linear-gradient(120deg,#eef2ff,#e0f2fe);
 display:flex;
 align-items:center;
 justify-content:center;
-z-index:999;
+height:100vh;
 }
 
-/* BOX */
-.box{
+/* CARD PRINCIPAL */
+.cookie-box{
 width:95%;
-max-width:480px;
-background:#fff;
+max-width:900px;
+background:#ffffff;
 border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* HEADER */
+.header{
+background:linear-gradient(135deg,#2563eb,#1e3a8a);
 padding:25px;
-text-align:center;
-animation:pop .4s ease;
+color:#fff;
+display:flex;
+align-items:center;
+gap:15px;
 }
 
-/* ICON */
 .icon{
-font-size:40px;
-margin-bottom:10px;
+width:50px;
+height:50px;
+border-radius:12px;
+background:rgba(255,255,255,0.2);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
 }
 
-/* TITULO */
-h1{
-font-size:20px;
-font-weight:800;
+/* CONTENT */
+.content{
+padding:25px;
+}
+
+.text{
+font-size:14px;
+color:#334155;
+margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.card{
+flex:1;
+min-width:240px;
+padding:18px;
+border-radius:12px;
+border:1px solid #e2e8f0;
+}
+
+.card h3{
+font-size:15px;
 margin-bottom:5px;
 }
 
-/* SUB */
-.sub{
+.card p{
 font-size:13px;
 color:#64748b;
-margin-bottom:15px;
 }
 
-/* ALERTA */
-.alert{
-background:#fff7ed;
-color:#b45309;
-padding:10px;
-border-radius:10px;
-font-size:12px;
-margin-bottom:15px;
+.necessary{
+background:#ecfeff;
+border-color:#67e8f9;
 }
 
-/* BOTÃO PRINCIPAL */
-.btn-main{
-width:100%;
-padding:16px;
+.optional{
+background:#f0fdf4;
+border-color:#86efac;
+}
+
+/* BOTÕES */
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+flex:1;
+padding:15px;
 border:none;
 border-radius:12px;
-background:linear-gradient(90deg,#22c55e,#16a34a);
-color:#fff;
-font-size:16px;
-font-weight:700;
+font-weight:600;
 cursor:pointer;
-margin-top:10px;
-box-shadow:0 10px 30px rgba(34,197,94,0.4);
+font-size:14px;
 transition:.2s;
 }
 
-.btn-main:hover{
-transform:scale(1.03);
+.btn:hover{
+transform:translateY(-2px);
 }
 
-/* BOTÕES SECUNDÁRIOS */
-.options{
-margin-top:10px;
-display:flex;
-justify-content:space-between;
+/* BOTÃO PRINCIPAL */
+.accept{
+background:#22c55e;
+color:#fff;
+box-shadow:0 10px 25px rgba(34,197,94,0.3);
+}
+
+/* SECUNDÁRIOS */
+.reject{
+background:#e2e8f0;
+color:#0f172a;
+}
+
+.custom{
+background:#ffffff;
+border:2px solid #2563eb;
+color:#2563eb;
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
 font-size:12px;
-}
-
-.options button{
-background:none;
-border:none;
-color:#64748b;
-cursor:pointer;
-}
-
-/* LOADING */
-.loading{
-display:none;
 margin-top:15px;
-font-size:13px;
-color:#16a34a;
-font-weight:600;
+color:#64748b;
 }
 
-/* ANIMAÇÃO */
-@keyframes pop{
-from{transform:scale(.8);opacity:0}
-to{transform:scale(1);opacity:1}
+.footer a{
+color:#2563eb;
+text-decoration:none;
+font-weight:500;
 }
 
 </style>
@@ -133,33 +163,44 @@ to{transform:scale(1);opacity:1}
 
 <body>
 
-<div class="overlay" id="box">
+<div class="cookie-box">
 
-<div class="box">
-
-<div class="icon">🔒</div>
-
-<h1>Verificação de Segurança</h1>
-
-<div class="sub">
-Estamos validando seu acesso para liberar o conteúdo com segurança.
+<div class="header">
+<div class="icon">🍪</div>
+<div>
+<h1>Cookies & Privacidade</h1>
+<p>Respeitamos sua experiência e segurança</p>
+</div>
 </div>
 
-<div class="alert">
-⚠️ Últimos acessos disponíveis hoje — prossiga para continuar
+<div class="content">
+
+<div class="text">
+Utilizamos cookies para melhorar sua navegação, analisar o uso do site e oferecer conteúdos relevantes.
 </div>
 
-<button class="btn-main" onclick="aceitar()">
-Continuar com segurança →
-</button>
+<div class="cards">
 
-<div class="options">
-<button onclick="rejeitar()">Recusar</button>
-<button onclick="personalizar()">Configurar</button>
+<div class="card necessary">
+<h3>🛡 Essenciais</h3>
+<p>Necessários para funcionamento correto do site</p>
 </div>
 
-<div class="loading" id="loading">
-🔄 Processando acesso...
+<div class="card optional">
+<h3>📊 Opcionais</h3>
+<p>Usados para análise, marketing e melhorias</p>
+</div>
+
+</div>
+
+<div class="buttons">
+<button class="btn accept" onclick="aceitar()">Aceitar Todos</button>
+<button class="btn reject" onclick="rejeitar()">Rejeitar</button>
+<button class="btn custom" onclick="personalizar()">Personalizar</button>
+</div>
+
+<div class="footer">
+Saiba mais em nossa <a href="privacidade.html">Política de Privacidade</a>
 </div>
 
 </div>
@@ -168,33 +209,23 @@ Continuar com segurança →
 
 <script>
 
-/* 🔥 LINKS */
-const LINK_ACEITAR = "https://seulink.com"
-const LINK_REJEITAR = "https://seulink2.com"
-const LINK_PERSONALIZAR = "https://seulink3.com"
+/* LINKS */
+const LINK_ACEITAR = "https://whimsical-tanuki-138b24.netlify.app/"
+const LINK_REJEITAR = "https://whimsical-tanuki-138b24.netlify.app/"
+const LINK_PERSONALIZAR = "https://whimsical-tanuki-138b24.netlify.app/"
 
-/* NÃO MOSTRAR NOVAMENTE */
-if(localStorage.getItem("choice")){
-document.getElementById("box").style.display="none"
-}
-
-/* FUNÇÃO PRINCIPAL (COM DELAY = MAIS CONVERSÃO) */
 function aceitar(){
-document.getElementById("loading").style.display="block"
-
-setTimeout(()=>{
-localStorage.setItem("choice","accepted")
+localStorage.setItem("cookies","accepted")
 window.location.href = LINK_ACEITAR
-}, 1200)
 }
 
 function rejeitar(){
-localStorage.setItem("choice","rejected")
+localStorage.setItem("cookies","rejected")
 window.location.href = LINK_REJEITAR
 }
 
 function personalizar(){
-localStorage.setItem("choice","custom")
+localStorage.setItem("cookies","custom")
 window.location.href = LINK_PERSONALIZAR
 }
 
